@@ -1,7 +1,5 @@
 <template>
-  <div>
-    Hello world blyat'
-  </div>
+  <router-view></router-view>
 </template>
 
 <script setup>
