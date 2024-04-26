@@ -1,8 +1,15 @@
 <script setup lang="ts">
 
 interface LogoProps {
-  orientation: string;
+  orientation: "vertical" | "horizontal";
+  colorful: boolean;
+  bgColor: boolean;
+  withText: boolean;
 }
+
+const props = defineProps<LogoProps>()
+
+
 
 </script>
 
