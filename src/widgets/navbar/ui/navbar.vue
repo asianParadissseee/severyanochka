@@ -1,12 +1,17 @@
 <script setup lang="ts">
 
+import {Container} from "@/shared/ui/container";
+import {Logo} from "@/shared/ui/logo";
+
+
+
 </script>
 
 <template>
   <header>
-    <div class="container mx-auto px-10">
-
-    </div>
+    <container>
+      <logo/>
+    </container>
   </header>
 </template>
 

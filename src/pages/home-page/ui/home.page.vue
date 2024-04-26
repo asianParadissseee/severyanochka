@@ -1,10 +1,12 @@
 <script setup lang="ts">
 
 import {Typography} from "@/shared/ui/typography";
+import {Navbar} from "@/widgets/navbar";
 </script>
 
 <template>
-  <typography size="" tag="h1" is-bold>
+  <navbar/>
+  <typography size="lg" tag="h1" is-bold>
     fdsfdsoi
   </typography>
 </template>
