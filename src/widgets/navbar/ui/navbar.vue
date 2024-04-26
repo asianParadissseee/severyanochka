@@ -10,13 +10,13 @@ import {IconUi} from "@/shared/ui/icon";
 
 <template>
   <header class="shadow-xl sticky top-0 left-0 w-full">
-    <container class="flex items-center h-20">
+    <container class="flex items-center justify-between h-20">
       <logo/>
-      <button-ui>
+      <button-ui size="w-40 h-10" bg-color="green-500">
         <template v-slot:leftIcon>
           <icon-ui/>
         </template>
-        hello
+        Каталог
       </button-ui>
     </container>
   </header>

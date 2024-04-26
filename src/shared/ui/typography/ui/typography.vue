@@ -3,14 +3,15 @@
 interface TypographyProps {
   tag: "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   isBold?: boolean;
-  size?: 'text-sm' | 'sm' | 'md' | 'lg' | 'xl';
+  size?: 'xs' | 'base' | 'lg' | '2xl' | '4xl' | '5xl' | '6xl' | '7xl' | "8xl";
+  isTextColor: boolean
 }
 
 
-const props = defineProps<TypographyProps>()
+const {tag = "p", isBold = false, isTextColor = false, size = "base"} = defineProps<TypographyProps>()
 </script>
 <template>
-  <component :class="[props.isBold ? 'font-bold' : 'font-normal', props.size]" :is="props.tag">
+  <component :class="[isBold ? 'font-bold' : 'font-normal', isTextColor ? 'text-white' : 'text-black' `text-${size}`]" :is="tag">
     <slot/>
   </component>
 </template>

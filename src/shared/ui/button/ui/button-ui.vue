@@ -1,8 +1,10 @@
 <script setup lang="ts">
 
+import {Typography} from "@/shared/ui/typography";
+
 interface ButtonProps {
-  bgColor?: "bg-orange-700" | "bg-green-500" | "bg-gray-200" | "bg-red-500"
-  decoration?: "border-orange-500" | "border-green-500" | "border-gray-200" | "border-red-500" | 'border-transparent'
+  bgColor?: "orange-700" | "green-500" | "gray-200" | "red-500"
+  decoration?: "orange-500" | "green-500" | "gray-200" | "red-500" | 'transparent'
   disabled?: boolean;
   size?: "w-48 h-14" | "w-40 h-10" | "w-40 h-8"
 }
@@ -11,16 +13,20 @@ const props = defineProps<ButtonProps>()
 
 const {
   size = "w-48 h-14",
-  bgColor = "bg-gray-200",
+  bgColor = "gray-200",
   disabled = false,
-  decoration = "border-transparent",
+  decoration = "transparent",
 } = props
 
 </script>
 
 <template>
-  <button :class="[bgColor,decoration, size, 'px-2 py-0.5 rounded border-2']">
+  <button :disabled="disabled"
+          :class="[ size, `bg-${bgColor} border-${decoration} px-2 py-0.5 flex items-center justify-center gap-3 rounded border-2`]">
     <slot name="leftIcon"></slot>
+    <typography is-text-color  tag="p" size="base">
+      <slot/>
+    </typography>
   </button>
 </template>
 
