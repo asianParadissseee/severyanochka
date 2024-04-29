@@ -24,7 +24,7 @@ const {
   <button :disabled="disabled"
           :class="[ size, `bg-${bgColor} border-${decoration} px-2 py-0.5 flex items-center justify-center gap-3 rounded border-2`]">
     <slot name="leftIcon"></slot>
-    <typography is-text-color  tag="p" size="base">
+    <typography text-color="white"  tag="p" size="base">
       <slot/>
     </typography>
   </button>
